@@ -130,10 +130,13 @@ public class Runner {
 				+ "and the second the bottom one.");
 		System.out.println("* Usage Tip 3: Individual strings within a set are separated by whitespace. ");
 		System.out.println(
-				"* Usage Tip 4: If there is a solution to the given instance, this program is guaranteed to find it.");
+				"* Usage Tip 4: If there is a solution to the given instance, this program is guaranteed to find 
+			it.");
 		System.out.println("\t\tHowever, depending on the length of a solution sequence, it may take an extended "
-				+ "amount of time to find.\n\t\tEither way, the program will eventually halt **, as the search is bounded by k. "
-				+ "\n\n** This excludes any memory defaults set by your Eclipse Java garbage collector, which can be modified at will.\n");
+				+ "amount of time to find.\n\t\tEither way, the program will eventually halt **, as the search is 
+				   bounded by k. "
+				+ "\n\n** This excludes any memory defaults set by your Eclipse Java garbage collector, 
+				   which can be modified at will.\n");
 		System.out.println("\t\t\t-----------------------------------------\n");
 	}
 }
