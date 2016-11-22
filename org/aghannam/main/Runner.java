@@ -125,7 +125,8 @@ public class Runner {
 		System.out.println("A Solver for the Bounded Post's Correspondence Problem ***\n");
 		System.out.println("\t\t\t---------------USAGE TIPS---------------\n");
 		System.out.println(
-				"* Usage Tip 1: You are to enter two non-empty sets of strings and a positive integer k as input.");
+				"* Usage Tip 1: You are to enter two non-empty sets of strings and a positive integer k as 
+			input.");
 		System.out.println("* Usage Tip 2: The first set represents the top portion of a BPCP instance, "
 				+ "and the second the bottom one.");
 		System.out.println("* Usage Tip 3: Individual strings within a set are separated by whitespace. ");
