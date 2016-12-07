@@ -41,7 +41,7 @@ public class Solver {
 	private ArrayList<String> permutations = new ArrayList<String>();
 
 	/**
-	 * The current iteration in the search process.
+	 * The current iteration in the search process (always initialized to 0).
 	 */
 	private int step = 0;
 
@@ -58,16 +58,16 @@ public class Solver {
 	}
 
 	/**
-	 * Attempts to find a solution for a given BPCP instance using breadth-first
-	 * search.
+	 * Attempts to find a solution for the given BPCP instance using
+	 * breadth-first search.
 	 * <p>
-	 * If a solution is found, it is returned as a sequence of positive
-	 * integers, each corresponding to a pair from the input instance. The
-	 * length of this sequence will always be less than or equal to the value of
-	 * k. For instances with no solution on the specified k, this method
-	 * terminates with an appropriate message. The search can take an extended
-	 * amount of time depending primarily on the difficulty of the input
-	 * instance.
+	 * If a solution is found, it is returned as a sequence of (not necessarily
+	 * distinct) positive integers, each of which corresponds to exactly one
+	 * pair as per the input instance. The length of this sequence will always
+	 * be less than or equal to the supplied value of k. For instances with no
+	 * solution on the specified k, this method terminates with an appropriate
+	 * message. The search can take an extended amount of time depending
+	 * primarily on the difficulty of the input instance.
 	 * 
 	 * @param instance
 	 *            the input list of pairs of strings for which to search for a
@@ -91,7 +91,7 @@ public class Solver {
 			bottom = "";
 
 			if (sequence.length > k) {
-				break; // no solution of length <= k found
+				break; // terminate; no solution of length <= k found
 			}
 
 			for (int i = 0; i < sequence.length; i++) {
@@ -120,6 +120,59 @@ public class Solver {
 	}
 
 	/**
+	 * Tentatively determines if the given PCP instance has a solution at all.
+	 * <p>
+	 * One way of identifying a solvable instance is by checking the lengths of
+	 * the top and bottom strings of a pair. A solvable instance must have one
+	 * pair where the top string is longer than the bottom string and another
+	 * pair where the bottom string is longer than the top one.
+	 * <p>
+	 * Although this lemma cannot be applied to detect all unsolvable instances,
+	 * it can nonetheless be used to identify and filter out many unsolvable
+	 * instances. Finally, the lemma ignores the trivial case, in which an
+	 * instance has a pair with identical top and bottom strings; however, this
+	 * method ensures such cases are not overlooked.
+	 * 
+	 * @param instance
+	 *            the input list of pairs of strings
+	 * @return <code>true</code> if the instance is deemed unsolvable according
+	 *         to the above lemma, <code>false</code> otherwise
+	 */
+	public boolean isUnsolvable(ArrayList<Pair> instance) {
+		boolean hasTopLongerThanBottom = false;
+		boolean hasBottomLongerThanTop = false;
+
+		// Check for the trivial case first
+		for (Pair p : instance) {
+			if (p.top.equals(p.bottom)) {
+				return false;
+			}
+		}
+
+		for (Pair p : instance) {
+			if (p.top.length() > p.bottom.length()) {
+				hasTopLongerThanBottom = true;
+				break;
+			}
+		}
+
+		for (Pair p : instance) {
+			if (p.bottom.length() > p.top.length()) {
+				hasBottomLongerThanTop = true;
+				break;
+			}
+		}
+
+		// If both conditions are satisfied, then the instance *might* have a
+		// solution, so it is considered solvable
+		if (hasTopLongerThanBottom == true && hasBottomLongerThanTop == true) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
 	 * Displays the current search sequence. (Should only be called when a
 	 * solution is found.)
 	 * 
@@ -130,6 +183,7 @@ public class Solver {
 		for (int i = 0; i < sequence.length; i++) {
 			System.out.print(sequence[i] + " ");
 		}
+		System.out.print("\n"); // skip a line
 	}
 
 	/**
@@ -155,12 +209,12 @@ public class Solver {
 	}
 
 	/**
-	 * Computes the permutation induced by the visit order of a BFS traversal
-	 * step.
+	 * Recursively computes the permutation induced by the visit order of a BFS
+	 * traversal step, which is returned as a <code>String</code>.
 	 * 
 	 * @param iteration
 	 *            the current iteration in the search
-	 * @return the computed BFS permutation
+	 * @return the computed BFS permutation for this iteration
 	 */
 	private String computePermutation(int iteration) {
 		if (iteration < n + 1) {
