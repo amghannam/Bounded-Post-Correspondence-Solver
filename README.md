@@ -38,7 +38,7 @@ Then simply follow the on-screen instructions to begin. Alternatively, it can be
 
 ## A Word on Efficiency 
 
-Post's Correspondence Problem is a *hard* computational problem and so are its variants. Although the BPCP is decidable, hard instances will still take a considerable amount of time to find a solution. As it currently stands, this program is unlikely to efficiently find solutions whose lengths are in excess of ~40-60 pairs. For this reason, it is recommended that only easy-to-medium instances be used for it. 
+Post's Correspondence Problem is a *hard* computational problem and so are its variants. Although the BPCP is decidable, hard instances will still take a considerable amount of time to find a solution for. As it currently stands, this program is unlikely to efficiently find solutions whose lengths are in excess of ~40-60 pairs. For this reason, it is recommended that only easy-to-medium instances be used for it. 
 
 ## Help 
 
