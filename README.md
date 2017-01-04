@@ -5,7 +5,7 @@ If there is a solution, it is returned as a sequence of numbers corresponding to
 
 ## Example Instance 
 
-In the BPCP, the input is a list of pairs of strings, including an integer *k* that represents the maximum possible length of a potential solution sequence. Consider the example list of pairs below:
+In the BPCP, the input is a list of pairs of strings, along with an integer *k* (which must be larger than zero!) that represents the maximum possible length of a potential solution sequence. Consider the example list of pairs below:
 
 ```
  a       ab      bba
