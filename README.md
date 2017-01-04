@@ -1,5 +1,7 @@
 ## A Solver for the Bounded Post's Correspondence Problem 
-The Bounded Post's Correspondence Problem (BPCP) is an important variant of the much-celebrated [Post's Correspondence Problem] (https://en.wikipedia.org/wiki/Post_correspondence_problem). Given a list of pairs of strings, is there a way to permute at most *k* pairs such that the resulting pair sequence contains identical strings? If there is a solution, it is returned as a sequence of numbers corresponding to the resulting permutation that represents the solution. The length of this sequence must necessarily be less than or equal to the specified value of *k*. In this way, the BCPC is *decidable*, unlike its parent, the PCP, which is undecidable.
+The Bounded Post's Correspondence Problem (BPCP) is an important variant of the much-celebrated [Post's Correspondence Problem] (https://en.wikipedia.org/wiki/Post_correspondence_problem). Given a list of pairs of strings, is there a way to permute at most *k* pairs such that the resulting pair sequence contains identical strings? 
+
+If there is a solution, it is returned as a sequence of numbers corresponding to the resulting permutation that represents the solution. The length of this sequence must necessarily be less than or equal to the specified value of *k*. In this way, the BCPC is *decidable*, unlike its parent, the PCP, which is undecidable.
 
 ## Example Instance 
 
