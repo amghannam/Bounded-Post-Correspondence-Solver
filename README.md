@@ -16,7 +16,7 @@ baa      aa       bb
 In this case, we have three pairs, numbered 1, 2, and 3, respectively. If *k* >= 4, then there is a solution of the form:
 
 ```
-bba      ab     bba     a
+ bba     ab     bba     a
 -----   ---    ----   ----
  bb      aa     bb     baa
  3       2       3      1
