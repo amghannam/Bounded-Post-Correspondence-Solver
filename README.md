@@ -26,17 +26,17 @@ A quick look at the solution reveals that the above string is the same as the bo
 
 ## How to Run 
 
-To run the program, execute the following command:
+To run the program, export it to a JAR and then execute the following command in the directory where the ```.jar``` file resides:
 
 ````
-java -jar Runner.jar 
+> java -jar Runner.jar 
 ```
 
-Then simply follow the on-screen instructions to begin. 
+Then simply follow the on-screen instructions to begin. Alternatively, it can be run directly from your IDE if you simply import it. 
 
 ## A Word on Efficiency 
 
-Although the BPCP is decidable, hard instances can still take a considerable amount of time to find a solution. As it currently stands, the program is unlikely to find solutions whose lengths are in excess of 50-60 pairs. For this reason, it is recommended that only easy-to-medium instances be used for it. 
+Although the BPCP is decidable, hard instances will still take a considerable amount of time to find a solution. As it currently stands, the program is unlikely to find solutions whose lengths are in excess of 50-60 pairs. For this reason, it is recommended that only easy-to-medium instances be used for it. 
 
 ## Help 
 
