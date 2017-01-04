@@ -22,7 +22,7 @@ In this case, we have three pairs, numbered 1, 2, and 3, respectively. If *k* >=
  3       2       3      1
 ```
 
-A quick look at the solution reveals that the above string is the same as the bottom string, which are both ```bbaabbbaa```. Correspondingly, the solution sequence is ```3 2 3 1```, whose length is 4. However, if *k* <= 3, then no solution exists.
+A quick look at the solution reveals that the above string is the same as the bottom string, which are both ```bbaabbbaa```. Correspondingly, the solution sequence is ```3 2 3 1```, whose length is 4. However, if *k* <= 3, then no solution exists, since no matter how we try to permute the pairs, it is impossible to find a matching sequence using only three or fewer pairs. 
 
 ## How to Run 
 
