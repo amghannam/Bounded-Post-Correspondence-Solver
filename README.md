@@ -28,22 +28,3 @@ A quick look at the solution reveals that the top string is the same as the bott
 
 Note that there could be more than one possible solution for a given input instance; however, this program will only find the first solution it comes across. 
 
-## How to Run 
-
-To run the program, export it to a JAR and then execute the following command in the directory where the ```.jar``` file resides:
-
-````
-> java -jar Runner.jar 
-```
-
-Then simply follow the on-screen instructions to begin. Alternatively, it can be run directly from your IDE if you simply import it. 
-
-## A Word on Efficiency 
-
-Post's Correspondence Problem is a *hard* computational problem and so are its variants. Although the BPCP is decidable, hard instances will still take a considerable amount of time to find a solution for. As it currently stands, this program is unlikely to efficiently find solutions whose lengths are in excess of ~40-60 pairs. For this reason, it is recommended that only easy-to-medium instances be used for it. 
-
-## Help 
-
-For questions or comments, please email me at amalghannam@crimson.ua.edu. 
-
-
