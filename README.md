@@ -42,8 +42,4 @@ Post's Correspondence Problem is a *hard* computational problem and so are its v
 
 ## Help 
 
-For questions or comments, please email me at amalghannam@crimson.ua.edu. 
-
-## Help
-
-For any questions or inquiries, please contact me at amalghannam@crimson.ua.edu. 
+For questions or comments, please contact me at amalghannam@crimson.ua.edu. 
