@@ -1,5 +1,5 @@
 ## A Solver for the Bounded Post's Correspondence Problem 
-The Bounded Post's Correspondence Problem (BPCP) is an important variant of the much-celebrated [Post's correspondence problem] (https://en.wikipedia.org/wiki/Post_correspondence_problem). Given a list of pairs of strings, with each pair numbered in the order it appears, is there a way to permute at most *k* pairs (which need not necessarily be distinct) such that the resulting pair sequence contains identical strings? 
+The Bounded Post's Correspondence Problem (BPCP) is an important variant of the much-celebrated [Post's correspondence problem](https://en.wikipedia.org/wiki/Post_correspondence_problem). Given a list of pairs of strings, with each pair numbered in the order it appears, is there a way to permute at most *k* pairs (which need not necessarily be distinct) such that the resulting pair sequence contains identical strings? 
 
 If there is a solution, it is returned as a sequence of numbers corresponding to the resulting permutation that represents the solution. The length of this sequence must necessarily be less than or equal to the specified value of *k*. In this way, the BPCP is *decidable*, unlike its parent, the PCP, which is undecidable.
 
@@ -30,9 +30,20 @@ Note that there could be more than one possible solution for a given input insta
 
 ## How to Run
 
+Execute the following command to run the solver:
 
+```
+java -jar Runner.jar 
+``` 
+
+## A Word on Efficiency 
+
+Post's Correspondence Problem is a *hard* computational problem and so are its variants. Although the BPCP is decidable, hard instances will still take a considerable amount of time to find a solution for. As it currently stands, this program is unlikely to efficiently find solutions whose lengths are in excess of ~40-60 pairs. For this reason, it is recommended that only easy-to-medium instances be used for it. 
+
+## Help 
+
+For questions or comments, please email me at amalghannam@crimson.ua.edu. 
 
 ## Help
 
 For any questions or inquiries, please contact me at amalghannam@crimson.ua.edu. 
-
